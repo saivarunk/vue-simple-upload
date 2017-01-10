@@ -4,7 +4,7 @@
 
 <script type="text/babel">
 export default {
-
+  name: 'fileupload',
   props: {
     target: {
       type: String
