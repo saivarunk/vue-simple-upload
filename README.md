@@ -100,10 +100,30 @@ new Vue({
 You can access the file upload events using v-on methods.
 
 - File Upload start event:
-  You can access the start event using v-on:"start()"
+  You can access the start event using v-on:start"startUpload"
+
+```js
+
+methods() {
+  startUpload(e) {
+    // start event
+  }
+}
+
+```
 
 - File Upload finish event:
-  You can access the start event using v-on:"finish()"
+  You can access the start event using v-on:finish"finishUpload"
+
+```js
+
+methods() {
+  finishUpload(e) {
+    // finish event
+  }
+}
+
+```
 
 ## License
 
