@@ -46,10 +46,10 @@ var YourComponent = Vue.extend({
 
 ### Browser
 
-```
+```html
 <script src="path/to/vue/vue.min.js"></script>
 <script src="path/to/vue-simple-upload/dist/vue-simple-upload.min.js"></script>
-
+<script>
 new Vue({
   ...
   components: {
@@ -57,10 +57,11 @@ new Vue({
   },
   ...
 })
+</script>
 ```
 ## Usage 
 
-```
+```vue
 <template>
 <fileupload target="http://localhost:8000/api/upload" action:"POST" v-on:start"startUpload()" v-on:finish="finishUpload()"></fileupload>
 </template>
@@ -83,9 +84,6 @@ new Vue({
   }
 })
 </script>
-
-
-
 ```
 
 ## Props
