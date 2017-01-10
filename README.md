@@ -1,11 +1,13 @@
 # vue-simple-upload
 
+[![npm](https://img.shields.io/npm/v/vue-simple-upload.svg) ![npm](https://img.shields.io/npm/dm/vue-simple-upload.svg)](https://www.npmjs.com/package/vue-simple-upload)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+
 An simple file upload component for vue.js.
 
 ## Installation
 
 `npm install vue-simple-upload`
-
 
 ## Usage
 vue-simple-upload is a UMD module, which can be used as a module in both CommonJS and AMD modular environments.
