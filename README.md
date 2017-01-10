@@ -58,7 +58,35 @@ new Vue({
   ...
 })
 ```
+## Usage 
 
+```
+<template>
+<fileupload target="http://localhost:8000/api/upload" action:"POST" v-on:start"startUpload()" v-on:finish="finishUpload()"></fileupload>
+</template>
+
+<script>
+new Vue({
+  ...
+  components: {
+    'fileupload': FileUpload.FileUpload
+  },
+  methods: {
+    startUpload(e) {
+      // file upload start event
+      console.log(e);
+    },
+    finishUpload(e) {
+      // file upload finish event
+      console.log(e);
+    }
+  }
+})
+</script>
+
+
+
+```
 
 ## Props
 
@@ -69,9 +97,15 @@ new Vue({
    Target action ( POST or PUT )
 
 
-## Event
+## Events
 
+You can access the file upload events using v-on methods.
 
+- File Upload start event:
+  You can access the start event using v-on:"start()"
+
+- File Upload finish event:
+  You can access the start event using v-on:"finish()"
 
 ## License
 
