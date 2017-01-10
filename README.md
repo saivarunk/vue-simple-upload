@@ -19,7 +19,7 @@ import FileUpload from 'vue-simple-upload/dist/FileUpload'
 export default {
   ...
   components: {
-    FileUpload
+    'fileupload': FileUpload
   },
   ...
 }
@@ -63,7 +63,7 @@ new Vue({
 
 ```vue
 <template>
-<fileupload target="http://localhost:8000/api/upload" action:"POST" v-on:start"startUpload()" v-on:finish="finishUpload()"></fileupload>
+<fileupload target="http://localhost:8000/api/upload" action:"POST" v-on:start"startUpload" v-on:finish="finishUpload"></fileupload>
 </template>
 
 <script>
