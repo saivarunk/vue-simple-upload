@@ -107,4 +107,4 @@ You can access the file upload events using v-on methods.
 
 ## License
 
-Released under the [MIT](LICENSE) License.
+Released under the [MIT](LICENCE) License.
