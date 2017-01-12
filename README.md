@@ -29,7 +29,7 @@ export default {
 After that, you can use it in your templates:
 
 ```html
-<fileupload target="http://localhost:8000/api/upload" action:"POST"></fileupload>
+<fileupload target="http://localhost:8000/api/upload" action="POST"></fileupload>
 ```
 
 ### CommonJS
@@ -65,7 +65,7 @@ new Vue({
 
 ```vue
 <template>
-<fileupload target="http://localhost:8000/api/upload" action:"POST" v-on:start"startUpload" v-on:finish="finishUpload"></fileupload>
+<fileupload target="http://localhost:8000/api/upload" action="POST" v-on:start="startUpload" v-on:finish="finishUpload"></fileupload>
 </template>
 
 <script>
@@ -126,6 +126,10 @@ methods() {
 }
 
 ```
+## Todos
+
+- File Upload Progress
+- Multi File Upload
 
 ## License
 
