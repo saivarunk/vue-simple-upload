@@ -65,7 +65,7 @@ new Vue({
 
 ```vue
 <template>
-<fileupload target="http://localhost:8000/api/upload" action="POST" v-on:start="startUpload" v-on:finish="finishUpload"></fileupload>
+<fileupload target="http://localhost:8000/api/upload" action="POST" v-on:progress="progress" v-on:start="startUpload" v-on:finish="finishUpload"></fileupload>
 </template>
 
 <script>
@@ -81,6 +81,11 @@ new Vue({
     },
     finishUpload(e) {
       // file upload finish event
+      console.log(e);
+    },
+    progress(e) {
+      // file upload progress
+      // returns false if progress is not computable
       console.log(e);
     }
   }
@@ -102,7 +107,7 @@ new Vue({
 You can access the file upload events using v-on methods.
 
 - File Upload start event:
-  You can access the start event using v-on:start"startUpload"
+  You can access the start event using v-on:start="startUpload"
 
 ```js
 
@@ -115,7 +120,7 @@ methods() {
 ```
 
 - File Upload finish event:
-  You can access the start event using v-on:finish"finishUpload"
+  You can access the start event using v-on:finish="finishUpload"
 
 ```js
 
@@ -126,9 +131,22 @@ methods() {
 }
 
 ```
+
+- File Upload progress event:
+  You can access the file upload progress using v-on:progress="progress"
+
+```js
+
+methods() {
+  progress(e) {
+    // listen to file upload progress
+  }
+}
+
+```
+
 ## Todos
 
-- File Upload Progress
 - Multi File Upload
 
 ## License

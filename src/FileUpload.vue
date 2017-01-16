@@ -23,6 +23,16 @@ export default {
     emitter (event, data) {
       this.$emit(event, data)
     },
+    updateProgress (oEvent) {
+      let vm = this
+      if (oEvent.lengthComputable) {
+        let percentComplete = Math.round(oEvent.loaded * 100 / oEvent.total)
+        vm.emitter('progress', percentComplete)
+      } else {
+        // Unable to compute progress information since the total size is unknown
+        vm.emitter('progress', false)
+      }
+    },
     onFileChange (e) {
       let vm = this
 
@@ -55,7 +65,7 @@ export default {
         xhr.onloadend = function (e) {
           vm.emitter('finish', e)
         }
-
+        xhr.upload.onprogress = vm.updateProgress
         xhr.send(formData)
       }
     }
