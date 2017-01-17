@@ -10,10 +10,10 @@ export default {
       type: String
     },
     action: {
-      type: String
+      type: String,
+      default: 'POST'
     }
   },
-
   data () {
     return {
       file: null
@@ -23,7 +23,7 @@ export default {
     emitter (event, data) {
       this.$emit(event, data)
     },
-    updateProgress (oEvent) {
+    uploadProgress (oEvent) {
       let vm = this
       if (oEvent.lengthComputable) {
         let percentComplete = Math.round(oEvent.loaded * 100 / oEvent.total)
@@ -65,7 +65,7 @@ export default {
         xhr.onloadend = function (e) {
           vm.emitter('finish', e)
         }
-        xhr.upload.onprogress = vm.updateProgress
+        xhr.upload.onprogress = vm.uploadProgress
         xhr.send(formData)
       }
     }

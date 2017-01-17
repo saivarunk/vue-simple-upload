@@ -1,0 +1,9 @@
+language: node_js
+deploy:
+  provider: npm
+  email: saivarunk@gmail.com
+  api_key:
+    secure: Okoj2P6BSKXh7KE/VdOF1vt3qI0YkLXPkmGFyzdMeIrJu2mdwCn8INZ70zUN4WDcE2Bz5RSQFlsjfhEPRn8hWkzVsZFwyRS73LeqiIAKjjemGoKkdS06d7A4b/QSVl9W+WlVzDfx4lLYMQVJwsRkRP7IDi5M2FX1QpxHihwmsf1CR3+ZnoGk297lRu+9r4kNiPhAb3b9qQxB364nBGAsSd1L4Sn0zGeUyriGRi4kF2RZoF7EQhHhnjV1Xfez9Els0oTUDckGxAbxZp5ZEMA2d6xAqJKDSEmcPrsqYBRGJOuzAMIS7kBZvM2MEa2ssKBr5IBYJ7ZGAg2NgcxkssqTQrIZSqD+vp2zvX4EfrBUGF00nUhX+CZCUQ3vzGUffa0l/pZDFKZsW0+P/rWNsnv7ewI3LAnZri3qt9U29iQwkFjosE/M2A8xn2usQfFrApnisydW65ZMWvrryUQAO+Iga+aa0yWrgGoo/N/k2yn0WG+G6ZCOH5FNBrnVEacpCrDcdf+WOiGVB/onLVbR9YIFmem460iT2fE7EVIthkr8Ba4nnfNirSenCDZD19M6a8Mat48FfnRPkmlsYLj2cDCURsXwifuV+iCqjaiJ3as9ZoLUrMT3ZqPbDwAo14teVOU3UPvAH195DWv8T723o7z50neAH9hSIA59gwEHGxoOf6I=
+  on:
+    tags: false
+    repo: saivarunk/vue-simple-upload

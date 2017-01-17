@@ -1,13 +1,12 @@
 var path = require('path')
-var webpack = require('webpack')
+// var webpack = require('webpack')
 
 var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
-  entry: './src/',
+  entry: 'src',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/gh-pages',
     filename: 'vue-simple-upload.min.js',
     library: 'FileUpload',
     libraryTarget: 'umd'
@@ -21,7 +20,7 @@ module.exports = {
     }
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    root: path.join(__dirname, 'node_modules')
   },
   module: {
     preLoaders: [{

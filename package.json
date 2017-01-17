@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-upload",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple File upload component for Vue.js",
   "author": "saivarunk@gmail.com",
   "repository": {
@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "start": "webpack-dev-server --inline --config build/webpack.base.conf.js",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.min.conf.js"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.min.conf.js",
+    "test": "karma start test/unit/karma.conf.js --single-run"
   },
   "main": "dist/vue-simple-upload.min.js",
   "dependencies": {
@@ -41,18 +42,21 @@
     "file-loader": "^0.8.4",
     "function-bind": "^1.0.2",
     "isparta-loader": "^2.0.0",
+    "jasmine-core": "^2.5.2",
     "json-loader": "^0.5.4",
-    "karma": "^0.13.15",
+    "karma": "^1.4.0",
     "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^1.1.0",
     "karma-mocha": "^0.2.2",
-    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-sinon-chai": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.24",
-    "karma-webpack": "^1.7.0",
+    "karma-webpack": "^2.0.1",
     "lolex": "^1.4.0",
     "mocha": "^2.4.5",
     "ora": "^0.2.0",
+    "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.3",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",

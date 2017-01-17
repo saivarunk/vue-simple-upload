@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vue-simple-upload.svg) ![npm](https://img.shields.io/npm/dm/vue-simple-upload.svg)](https://www.npmjs.com/package/vue-simple-upload)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![Build Status](https://secure.travis-ci.org/saivarunk/vue-simple-upload.png?branch=master)](https://travis-ci.org/saivarunk/vue-simple-upload)
 
 An simple file upload component for vue.js.
 
