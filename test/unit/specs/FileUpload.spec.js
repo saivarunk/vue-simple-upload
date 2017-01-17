@@ -13,7 +13,7 @@ describe('FileUpload.vue', () => {
     expect(defaultData.file).toBe(null)
   })
 
-  it('emitter should be a function', () => {
+  it('emitter has should be a function', () => {
     expect(typeof FileUpload.methods.emitter).toBe('function')
   })
 
