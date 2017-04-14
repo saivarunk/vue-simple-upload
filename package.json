@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-upload",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Simple File upload component for Vue.js",
   "author": "saivarunk@gmail.com",
   "repository": {
@@ -18,16 +18,13 @@
     "test": "karma start test/unit/karma.conf.js --single-run"
   },
   "main": "dist/vue-simple-upload.min.js",
-  "dependencies": {
-    "babel-runtime": "^6.20.0",
-    "vue": "^2.0.0"
-  },
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-runtime": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^6.20.0",
     "chai": "^3.5.0",
     "copy-webpack-plugin": "^1.1.1",
     "cross-env": "^1.0.6",
@@ -58,9 +55,10 @@
     "ora": "^0.2.0",
     "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.3",
-    "sinon": "^1.17.3",
+    "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
+    "vue": "^2.0.0",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.2.1",
