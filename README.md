@@ -6,6 +6,8 @@
 
 An simple file upload component for vue.js.
 
+Checkout Demo on [JSFiddle](https://jsfiddle.net/saivarunk/o9vwjnar/)
+
 ## Installation
 
 `npm install vue-simple-upload`
