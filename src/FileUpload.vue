@@ -13,6 +13,9 @@ export default {
       type: String,
       default: 'POST'
     },
+    alias: {
+      type: String
+    },
   },
   data () {
     return {
