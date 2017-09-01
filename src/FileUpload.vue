@@ -12,7 +12,7 @@ export default {
     action: {
       type: String,
       default: 'POST'
-    }
+    },
   },
   data () {
     return {
@@ -32,6 +32,18 @@ export default {
         // Unable to compute progress information since the total size is unknown
         vm.emitter('progress', false)
       }
+    },
+    getCookie: function(name)
+    {
+        var arr,reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+        {
+            return unescape(arr[2]);
+        }
+        else
+        {
+            return null;
+        }
     },
     onFileChange (e) {
       let vm = this
@@ -54,10 +66,11 @@ export default {
 
         this.file = files[0]
         let formData = new FormData()
-        formData.append('file', this.file)
-
+        formData.append(this.alias, this.file)
         var xhr = new XMLHttpRequest()
         xhr.open(this.action, this.target)
+
+        xhr.setRequestHeader("X-XSRF-TOKEN", vm.getCookie('XSRF-TOKEN'));
 
         xhr.onloadstart = function (e) {
           vm.emitter('start', e)
