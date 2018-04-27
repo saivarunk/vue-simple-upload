@@ -16,6 +16,10 @@ export default {
     alias: {
       type: String
     },
+    headers : {
+      type: Object,
+      default: () => ({})
+    }
   },
   data () {
     return {
@@ -74,7 +78,9 @@ export default {
         xhr.open(this.action, this.target)
 
         xhr.setRequestHeader("X-XSRF-TOKEN", vm.getCookie('XSRF-TOKEN'));
-
+        for (var key in this.headers) {
+          xhr.setRequestHeader(key, this.headers[key]);
+        }
         xhr.onloadstart = function (e) {
           vm.emitter('start', e)
         }
