@@ -74,12 +74,17 @@ export default {
         xhr.open(this.action, this.target)
 
         xhr.setRequestHeader("X-XSRF-TOKEN", vm.getCookie('XSRF-TOKEN'));
+        
+        
+        xhr.onreadystatechange = function() {
+            let response =  this.responseText;
+        };
 
         xhr.onloadstart = function (e) {
           vm.emitter('start', e)
         }
-        xhr.onloadend = function (e) {
-          vm.emitter('finish', e)
+        xhr.onloadend = function (e) use(response) {
+          vm.emitter('finish', {event:e, response: response})
         }
         xhr.upload.onprogress = vm.uploadProgress
         xhr.send(formData)
