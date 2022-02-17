@@ -1,5 +1,9 @@
 <template>
-  <input type="file" name="fileUpload" @change="onFileChange">
+  <div>
+    <input style="display:none;" type="file" :id="`fileUpload_${_uid}`" name="fileUpload" @change="onFileChange">
+    <a href="#" @click.prevent="`document.getElementById('fileUpload_${_uid}').click()`">{{title}}</a>
+    <span v-if="filename !== null">{{filename}}</span>
+  </div>
 </template>
 
 <script type="text/babel">
@@ -16,12 +20,16 @@ export default {
     alias: {
       type: String
     },
+    title: {
+      type: String
+    }
   },
   data () {
     return {
-      file: null
+      file: null,
+      fileName: null
     }
-  },
+  },  
   methods: {
     emitter (event, data) {
       this.$emit(event, data)
@@ -68,6 +76,7 @@ export default {
         /*eslint no-undef: "error"*/
 
         this.file = files[0]
+        this.fileName = this.file.name
         let formData = new FormData()
         formData.append(this.alias, this.file)
         var xhr = new XMLHttpRequest()
